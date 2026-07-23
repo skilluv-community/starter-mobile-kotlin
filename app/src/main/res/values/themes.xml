@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.SkilluvStarter" parent="Theme.Material3.DayNight.NoActionBar" />
+    <!--
+      The app draws its UI with Jetpack Compose Material3 (androidx.compose.material3),
+      so this XML theme only needs to disable the Android action bar and provide a
+      neutral background before Compose takes over. Using the built-in Android theme
+      avoids pulling in com.google.android.material:material just for XML themes.
+    -->
+    <style name="Theme.SkilluvStarter" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/skilluv_background</item>
+        <item name="android:statusBarColor">@color/skilluv_background</item>
+    </style>
 </resources>
