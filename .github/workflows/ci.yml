@@ -15,7 +15,7 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
-      - uses: gradle/actions/setup-gradle@v6
+      - uses: gradle/actions/setup-gradle@v6.2.0
       - name: Ensure gradle wrapper is executable
         run: chmod +x ./gradlew || true
       - run: ./gradlew --version
