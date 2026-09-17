@@ -5,6 +5,12 @@ updates:
     schedule: { interval: "weekly", day: "monday" }
     open-pull-requests-limit: 5
     labels: ["dependencies"]
+    ignore:
+      # kotlinx-coroutines >= 1.11 is published with Kotlin metadata 2.2,
+      # which doesn't link with our pinned Kotlin 2.0.21. Track upgrades
+      # together with a Kotlin bump instead.
+      - dependency-name: "org.jetbrains.kotlinx:kotlinx-coroutines-*"
+        versions: [">=1.11.0"]
 
   - package-ecosystem: "github-actions"
     directory: "/"
